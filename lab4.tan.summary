@@ -7,7 +7,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : 7.000 ns
 From           : rst_n
-To             : lpm_counter:cnt_rtl_0|dffs[20]
+To             : ledreg[4]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.000 ns
-From           : lpm_counter:cnt_rtl_0|dffs[20]
-To             : LED_out[0]
+Actual Time    : 5.000 ns
+From           : ledreg[2]
+To             : led[2]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -27,7 +27,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : -2.000 ns
 From           : rst_n
-To             : lpm_counter:cnt_rtl_0|dffs[20]
+To             : ledreg[4]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -36,8 +36,8 @@ Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
 Actual Time    : 100.00 MHz ( period = 10.000 ns )
-From           : lpm_counter:cnt_rtl_0|dffs[2]
-To             : lpm_counter:cnt_rtl_0|dffs[7]
+From           : ledreg[4]
+To             : ledreg[4]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0

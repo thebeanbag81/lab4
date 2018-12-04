@@ -68,24 +68,24 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 rst_n                        : 1         : input  : TTL               :         :           : Y              
 GND+                         : 2         :        :                   :         :           :                
 VCC                          : 3         : power  :                   :         :           :                
-RESERVED                     : 4         :        :                   :         :           :                
-RESERVED                     : 5         :        :                   :         :           :                
-RESERVED                     : 6         :        :                   :         :           :                
+led[6]                       : 4         : output : TTL               :         :           : N              
+led[5]                       : 5         : output : TTL               :         :           : N              
+led[1]                       : 6         : output : TTL               :         :           : N              
 TDI                          : 7         : input  : TTL               :         :           : N              
-RESERVED                     : 8         :        :                   :         :           :                
-RESERVED                     : 9         :        :                   :         :           :                
+led[0]                       : 8         : output : TTL               :         :           : N              
+led[4]                       : 9         : output : TTL               :         :           : N              
 GND                          : 10        : gnd    :                   :         :           :                
-RESERVED                     : 11        :        :                   :         :           :                
-LED_out[0]                   : 12        : output : TTL               :         :           : Y              
+led[3]                       : 11        : output : TTL               :         :           : N              
+led[2]                       : 12        : output : TTL               :         :           : N              
 TMS                          : 13        : input  : TTL               :         :           : N              
-LED_out[1]                   : 14        : output : TTL               :         :           : Y              
+RESERVED                     : 14        :        :                   :         :           :                
 VCC                          : 15        : power  :                   :         :           :                
-LED_out[2]                   : 16        : output : TTL               :         :           : Y              
-LED_out[3]                   : 17        : output : TTL               :         :           : Y              
-LED_out[4]                   : 18        : output : TTL               :         :           : Y              
-LED_out[5]                   : 19        : output : TTL               :         :           : Y              
-LED_out[6]                   : 20        : output : TTL               :         :           : Y              
-LED_out[7]                   : 21        : output : TTL               :         :           : Y              
+RESERVED                     : 16        :        :                   :         :           :                
+RESERVED                     : 17        :        :                   :         :           :                
+RESERVED                     : 18        :        :                   :         :           :                
+RESERVED                     : 19        :        :                   :         :           :                
+RESERVED                     : 20        :        :                   :         :           :                
+led[7]                       : 21        : output : TTL               :         :           : N              
 GND                          : 22        : gnd    :                   :         :           :                
 VCC                          : 23        : power  :                   :         :           :                
 RESERVED                     : 24        :        :                   :         :           :                
@@ -105,7 +105,7 @@ RESERVED                     : 37        :        :                   :         
 TDO                          : 38        : output : TTL               :         :           : N              
 RESERVED                     : 39        :        :                   :         :           :                
 RESERVED                     : 40        :        :                   :         :           :                
-RESERVED                     : 41        :        :                   :         :           :                
+midi                         : 41        : input  : TTL               :         :           : N              
 GND                          : 42        : gnd    :                   :         :           :                
 clk                          : 43        : input  : TTL               :         :           : Y              
 GND+                         : 44        :        :                   :         :           :                

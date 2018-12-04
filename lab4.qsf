@@ -60,3 +60,5 @@ set_location_assignment PIN_1 -to rst_n
 set_global_assignment -name MISC_FILE "C:/Users/ndirschel/Documents/lab4/lab4.dpf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE lab4.vwf
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_location_assignment PIN_26 -to Midi_in
+set_global_assignment -name MISC_FILE "C:/Users/ehart/Desktop/lab4-master/lab4.dpf"

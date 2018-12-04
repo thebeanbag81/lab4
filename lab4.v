@@ -1,28 +1,31 @@
-module lab4( 	
-		clk, 
-		rst_n, 
-		LED_out );
+module lab4(midi, clk, rst_n, led );
 
 input clk;
 input rst_n;
-output [7:0] LED_out;
+input midi;
+output [7:0] led;
 
 reg[20:0] cnt;
 wire[20:0] cnt_nxt;
-//assign LED_out[7:4] = cnt[20:17]; //count div by 128k
-//assign LED_out[3:0] = cnt[6:3];   //count div by 8
 
-assign LED_out = {8{cnt[20]}};
+reg[7:0] ledreg;
+reg[9:0] note;
+reg[29:0] bits;
 
+assign led = ledreg;
 assign cnt_nxt = cnt + 1'b1;
 
+
 always @(posedge clk) begin
-	if (!rst_n) begin
-		cnt <= 21'b0;
+	if(!rst_n) begin
+	ledreg = 8'b0;
 	end
-	else begin
-		cnt <= cnt_nxt;
+	if(!midi) begin
+	//MidiNote(midi,clk);
+	//cnt <= cnt_nxt;
+	ledreg = 8'b00011100;
+	
 	end
 end
-	
+
 endmodule

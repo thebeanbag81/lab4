@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPM7064SL44) Path("C:/Users/ndirschel/Documents/lab4/") File("lab4.pof") MfrSpec(OpMask(1));
+		Device PartName(EPM7064SL44) Path("C:/Users/ehart/Desktop/lab4-master/") File("lab4.pof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
