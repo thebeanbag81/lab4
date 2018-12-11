@@ -1,0 +1,278 @@
+Analysis & Synthesis report for Lab4Verilog1
+Mon Dec 10 21:12:07 2018
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. Port Connectivity Checks: "led:z"
+ 11. Port Connectivity Checks: "frameSelect:x"
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                          ;
++-----------------------------+-----------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Dec 10 21:12:07 2018   ;
+; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
+; Revision Name               ; Lab4Verilog1                            ;
+; Top-level Entity Name       ; Lab4Verilog1                            ;
+; Family                      ; MAX7000S                                ;
+; Total macrocells            ; 8                                       ;
+; Total pins                  ; 11                                      ;
++-----------------------------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM7064SLC44-10 ;               ;
+; Top-level entity name                                                      ; Lab4Verilog1    ; Lab4Verilog1  ;
+; Family name                                                                ; MAX7000S        ; Stratix II    ;
+; Use Generated Physical Constraints File                                    ; Off             ;               ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Create Debugging Nodes for IP Cores                                        ; Off             ; Off           ;
+; Preserve fewer node names                                                  ; On              ; On            ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off             ; Off           ;
+; Verilog Version                                                            ; Verilog_2001    ; Verilog_2001  ;
+; VHDL Version                                                               ; VHDL_1993       ; VHDL_1993     ;
+; State Machine Processing                                                   ; Auto            ; Auto          ;
+; Safe State Machine                                                         ; Off             ; Off           ;
+; Extract Verilog State Machines                                             ; On              ; On            ;
+; Extract VHDL State Machines                                                ; On              ; On            ;
+; Ignore Verilog initial constructs                                          ; Off             ; Off           ;
+; Iteration limit for constant Verilog loops                                 ; 5000            ; 5000          ;
+; Iteration limit for non-constant Verilog loops                             ; 250             ; 250           ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On              ; On            ;
+; Parallel Synthesis                                                         ; On              ; On            ;
+; NOT Gate Push-Back                                                         ; On              ; On            ;
+; Power-Up Don't Care                                                        ; On              ; On            ;
+; Remove Duplicate Registers                                                 ; On              ; On            ;
+; Ignore CARRY Buffers                                                       ; Off             ; Off           ;
+; Ignore CASCADE Buffers                                                     ; Off             ; Off           ;
+; Ignore GLOBAL Buffers                                                      ; Off             ; Off           ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off             ; Off           ;
+; Ignore LCELL Buffers                                                       ; Auto            ; Auto          ;
+; Ignore SOFT Buffers                                                        ; Off             ; Off           ;
+; Limit AHDL Integers to 32 Bits                                             ; Off             ; Off           ;
+; Optimization Technique                                                     ; Speed           ; Speed         ;
+; Allow XOR Gate Usage                                                       ; On              ; On            ;
+; Auto Logic Cell Insertion                                                  ; On              ; On            ;
+; Parallel Expander Chain Length                                             ; 4               ; 4             ;
+; Auto Parallel Expanders                                                    ; On              ; On            ;
+; Auto Open-Drain Pins                                                       ; On              ; On            ;
+; Auto Resource Sharing                                                      ; Off             ; Off           ;
+; Maximum Fan-in Per Macrocell                                               ; 100             ; 100           ;
+; Use LogicLock Constraints during Resource Balancing                        ; On              ; On            ;
+; Ignore translate_off and synthesis_off directives                          ; Off             ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On              ; On            ;
+; HDL message level                                                          ; Level2          ; Level2        ;
+; Suppress Register Optimization Related Messages                            ; Off             ; Off           ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100             ; 100           ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100             ; 100           ;
+; Block Design Naming                                                        ; Auto            ; Auto          ;
+; Synthesis Effort                                                           ; Auto            ; Auto          ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On              ; On            ;
+; Analysis & Synthesis Message Level                                         ; Medium          ; Medium        ;
+; Disable Register Merging Across Hierarchies                                ; Auto            ; Auto          ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+
+; VerilogLab4.v                    ; yes             ; User Verilog HDL File  ; C:/Users/jcrouss/Desktop/Lab4 ece353/VerilogLab4.v ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++----------------------+----------------------+
+; Resource             ; Usage                ;
++----------------------+----------------------+
+; Logic cells          ; 8                    ;
+; Total registers      ; 0                    ;
+; I/O pins             ; 11                   ;
+; Maximum fan-out node ; ~GND~0               ;
+; Maximum fan-out      ; 1                    ;
+; Total fan-out        ; 8                    ;
+; Average fan-out      ; 0.42                 ;
++----------------------+----------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                 ;
++----------------------------+------------+------+---------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+------------+------+---------------------+--------------+
+; |Lab4Verilog1              ; 8          ; 11   ; |Lab4Verilog1       ; work         ;
++----------------------------+------------+------+---------------------+--------------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; counter:y|c[2..10]                     ; Stuck at GND due to stuck port data_in ;
+; counter:y|c[0..1]                      ; Lost fanout                            ;
+; counter:y|b                            ; Lost fanout                            ;
+; frameSelect:x|d                        ; Stuck at GND due to stuck port data_in ;
+; frameSelect:x|e                        ; Stuck at GND due to stuck port data_in ;
+; counter:y|a                            ; Lost fanout                            ;
+; frameSelect:x|f[1..2]                  ; Lost fanout                            ;
+; frameSelect:x|f[0]                     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 18 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                        ;
++-----------------+---------------------------+----------------------------------------------------------------------+
+; Register name   ; Reason for Removal        ; Registers Removed due to This Register                               ;
++-----------------+---------------------------+----------------------------------------------------------------------+
+; counter:y|c[10] ; Stuck at GND              ; counter:y|b, frameSelect:x|d, frameSelect:x|f[2], frameSelect:x|f[1] ;
+;                 ; due to stuck port data_in ;                                                                      ;
+; counter:y|c[0]  ; Lost Fanouts              ; counter:y|a                                                          ;
++-----------------+---------------------------+----------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "led:z"                                                                                     ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; led_temp[9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; led_temp[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "frameSelect:x"                                                                                                            ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; frame ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "frame[2..1]" have no fanouts ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Mon Dec 10 21:12:06 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4Verilog1 -c Lab4Verilog1
+Info: Found 4 design units, including 4 entities, in source file veriloglab4.v
+    Info: Found entity 1: Lab4Verilog1
+    Info: Found entity 2: frameSelect
+    Info: Found entity 3: counter
+    Info: Found entity 4: led
+Info: Elaborating entity "Lab4Verilog1" for the top level hierarchy
+Info: Elaborating entity "counter" for hierarchy "counter:y"
+Warning (10230): Verilog HDL assignment warning at VerilogLab4.v(97): truncated value with size 11 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at VerilogLab4.v(111): truncated value with size 32 to match size of target (11)
+Info: Elaborating entity "frameSelect" for hierarchy "frameSelect:x"
+Info: Elaborating entity "led" for hierarchy "led:z"
+Warning (10230): Verilog HDL assignment warning at VerilogLab4.v(138): truncated value with size 32 to match size of target (5)
+Warning (10270): Verilog HDL Case Statement warning at VerilogLab4.v(134): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at VerilogLab4.v(134): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at VerilogLab4.v(134): inferring latch(es) for variable "sendLed", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "sendLed[0]" at VerilogLab4.v(134)
+Info (10041): Inferred latch for "sendLed[1]" at VerilogLab4.v(134)
+Info (10041): Inferred latch for "sendLed[2]" at VerilogLab4.v(134)
+Info (10041): Inferred latch for "sendLed[3]" at VerilogLab4.v(134)
+Info (10041): Inferred latch for "sendLed[4]" at VerilogLab4.v(134)
+Info (10041): Inferred latch for "sendLed[5]" at VerilogLab4.v(134)
+Info (10041): Inferred latch for "sendLed[6]" at VerilogLab4.v(134)
+Info (10041): Inferred latch for "sendLed[7]" at VerilogLab4.v(134)
+Info (10041): Inferred latch for "sendLed[8]" at VerilogLab4.v(134)
+Info (10041): Inferred latch for "sendLed[9]" at VerilogLab4.v(134)
+Warning: LATCH primitive "led:z|sendLed[1]" is permanently disabled
+Warning: LATCH primitive "led:z|sendLed[2]" is permanently disabled
+Warning: LATCH primitive "led:z|sendLed[3]" is permanently disabled
+Warning: LATCH primitive "led:z|sendLed[4]" is permanently disabled
+Warning: LATCH primitive "led:z|sendLed[5]" is permanently disabled
+Warning: LATCH primitive "led:z|sendLed[6]" is permanently disabled
+Warning: LATCH primitive "led:z|sendLed[7]" is permanently disabled
+Warning: LATCH primitive "led:z|sendLed[8]" is permanently disabled
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led_out[0]" is stuck at GND
+    Warning (13410): Pin "led_out[1]" is stuck at GND
+    Warning (13410): Pin "led_out[2]" is stuck at GND
+    Warning (13410): Pin "led_out[3]" is stuck at GND
+    Warning (13410): Pin "led_out[4]" is stuck at GND
+    Warning (13410): Pin "led_out[5]" is stuck at GND
+    Warning (13410): Pin "led_out[6]" is stuck at GND
+    Warning (13410): Pin "led_out[7]" is stuck at GND
+Info: 6 registers lost all their fanouts during netlist optimizations. The first 6 are displayed below.
+    Info: Register "counter:y|c[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "counter:y|c[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "counter:y|b" lost all its fanouts during netlist optimizations.
+    Info: Register "counter:y|a" lost all its fanouts during netlist optimizations.
+    Info: Register "frameSelect:x|f[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "frameSelect:x|f[1]" lost all its fanouts during netlist optimizations.
+Warning: Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "rst_n"
+    Warning (15610): No output dependent on input pin "midi"
+Info: Implemented 19 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 8 macrocells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 228 megabytes
+    Info: Processing ended: Mon Dec 10 21:12:07 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
