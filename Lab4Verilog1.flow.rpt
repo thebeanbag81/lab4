@@ -1,5 +1,5 @@
 Flow report for Lab4Verilog1
-Tue Dec 11 21:09:32 2018
+Tue Dec 11 21:55:21 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; Flow Summary                                                      ;
 +-------------------------+-----------------------------------------+
-; Flow Status             ; Flow Failed - Tue Dec 11 21:09:32 2018  ;
+; Flow Status             ; Flow Failed - Tue Dec 11 21:55:21 2018  ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name           ; Lab4Verilog1                            ;
 ; Top-level Entity Name   ; Lab4Verilog1                            ;
@@ -54,7 +54,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/11/2018 21:09:32 ;
+; Start date & time ; 12/11/2018 21:55:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab4Verilog1        ;
 +-------------------+---------------------+
@@ -65,7 +65,7 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                 ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 26830024389731.154458057211648                        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 26830024389731.154458332106244                        ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                     ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Users/jcrouss/Desktop/Lab4 ece353/Lab4Verilog1.dpf ; --            ; --          ; --             ;
@@ -78,7 +78,7 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:00     ; 1.0                     ; 227 MB              ; 00:00:00                           ;
+; Analysis & Synthesis ; 00:00:00     ; 1.0                     ; 228 MB              ; 00:00:00                           ;
 ; Total                ; 00:00:00     ; --                      ; --                  ; 00:00:00                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 

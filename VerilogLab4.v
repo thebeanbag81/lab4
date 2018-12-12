@@ -32,13 +32,26 @@ frameSelect x(frame, clock_f, lessThanIn);
 
 wire[9:0] sendLed;
 wire midi_z;
+wire clock_l;
 
-
-assign led_out[7:0] = sendLed[8:1];
+assign sendLed[8:1] = led_out[7:0];
 assign midi_z = midi;
+assign clock_l = clk;
+
+led z(clock_l,midi_z,frame,sendLed);
 
 
-led z(clk,midi_z,frame,sendLed);
+wire clock_r;
+wire midi_r;
+wire frame_r;
+wire[9:0] led_r;
+
+assign clock_r = clk;
+assign midi_r = midi;
+assign frame_r = frame;
+assign led_r[9:0] = sendLed[9:0];
+
+record r(clock_r,midi_r,frame_r,led_r);
 
 endmodule
 
@@ -121,45 +134,46 @@ input midi_z;
 input frame;
 output[9:0] sendLed;
 
-reg[9:0] sendLed;
-wire[9:0] x;
-wire[9:0] led_temp;
-assign x[9:0] = sendLed; 
-
-
+reg[9:0] x;
+assign sendLed[9:0] = x[9:0];
 
 always @(*) begin
 	case(frame)  
 		
 		3'b001:begin
-				//record
+		      r;
 					end
 	    
 	    3'b010:begin
-			sendLed[9:0] = led_temp[9:0];
+			 
 			   end
 	    
 		3'b101:begin
-			    sendLed[9:0] = 10'b0;
+			  x = 9'b0;
 			   end
 		
 	endcase
 end
 endmodule
 
-module record(clk,midi_z,led_temp);
+module record(clk,midi,frame,led);
+
+input wire frame;
+input wire clk;
+input wire midi;
+output led[9:0];
 
 reg[3:0] cnt;
 wire[3:0] cnt_nxt;
 assign cnt_nxt = cnt + 1'b1;
 
 always @(posedge clk) begin
-if (cnt != 3'b1010) begin
-	led_temp[cnt] = midi_z;
+if (cnt != 4'b1010) begin
+	led[cnt] = midi;
 	cnt <= cnt_nxt;
 end 
 else begin
-cnt = cnt + 3'b0101;
+cnt <= 4'b0;
 end
 end
 endmodule
