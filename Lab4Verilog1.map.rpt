@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4Verilog1
-Tue Dec 11 21:09:32 2018
+Wed Dec 12 14:06:34 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -10,8 +10,14 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Port Connectivity Checks: "bitCount:bC"
+  9. Port Connectivity Checks: "led:z"
+ 10. Port Connectivity Checks: "frameSelect:x"
+ 11. Port Connectivity Checks: "counter:y"
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -37,11 +43,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Dec 11 21:09:32 2018       ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 12 14:06:34 2018   ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name               ; Lab4Verilog1                            ;
 ; Top-level Entity Name       ; Lab4Verilog1                            ;
 ; Family                      ; MAX7000S                                ;
+; Total macrocells            ; 8                                       ;
+; Total pins                  ; 11                                      ;
 +-----------------------------+-----------------------------------------+
 
 
@@ -115,38 +123,138 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+
+; VerilogLab4.v                    ; yes             ; User Verilog HDL File  ; C:/Users/ehart/Desktop/lab4-master/VerilogLab4.v ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++----------------------+----------------------+
+; Resource             ; Usage                ;
++----------------------+----------------------+
+; Logic cells          ; 8                    ;
+; Total registers      ; 0                    ;
+; I/O pins             ; 11                   ;
+; Maximum fan-out node ; ~GND~0               ;
+; Maximum fan-out      ; 1                    ;
+; Total fan-out        ; 8                    ;
+; Average fan-out      ; 0.42                 ;
++----------------------+----------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                 ;
++----------------------------+------------+------+---------------------+--------------+
+; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+------------+------+---------------------+--------------+
+; |Lab4Verilog1              ; 8          ; 11   ; |Lab4Verilog1       ; work         ;
++----------------------------+------------+------+---------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bitCount:bC"                                                                                                                                               ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                              ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; counterVal ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (11 bits) it drives.  Extra input bit(s) "counterVal[10..1]" will be connected to GND. ;
+; bitNum     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                  ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "led:z"                                                                                    ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; sendLed[9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sendLed[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "frameSelect:x"                                                                                                            ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; frame ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "frame[2..1]" have no fanouts ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "counter:y"                                                                                                                            ;
++------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                         ;
++------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
+; counterVal ; Output ; Warning  ; Output or bidir port (11 bits) is wider than the port expression (1 bits) it drives; bit(s) "counterVal[10..1]" have no fanouts ;
++------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Tue Dec 11 21:09:32 2018
+    Info: Processing started: Wed Dec 12 14:06:33 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4Verilog1 -c Lab4Verilog1
-Warning (10229): Verilog HDL Expression warning at VerilogLab4.v(157): truncated literal to match 3 bits
 Info: Found 5 design units, including 5 entities, in source file veriloglab4.v
     Info: Found entity 1: Lab4Verilog1
     Info: Found entity 2: frameSelect
     Info: Found entity 3: counter
     Info: Found entity 4: led
-    Info: Found entity 5: record
-Error (10161): Verilog HDL error at VerilogLab4.v(150): object "clk" is not declared File: C:/Users/jcrouss/Desktop/lab4-thebeanbag81-patch-1/VerilogLab4.v Line: 150
-Error (10161): Verilog HDL error at VerilogLab4.v(150): object "midi_z" is not declared File: C:/Users/jcrouss/Desktop/lab4-thebeanbag81-patch-1/VerilogLab4.v Line: 150
-Error (10161): Verilog HDL error at VerilogLab4.v(150): object "led_temp" is not declared File: C:/Users/jcrouss/Desktop/lab4-thebeanbag81-patch-1/VerilogLab4.v Line: 150
-Error (10161): Verilog HDL error at VerilogLab4.v(156): object "clk" is not declared File: C:/Users/jcrouss/Desktop/lab4-thebeanbag81-patch-1/VerilogLab4.v Line: 156
-Error (10161): Verilog HDL error at VerilogLab4.v(158): object "led_temp" is not declared File: C:/Users/jcrouss/Desktop/lab4-thebeanbag81-patch-1/VerilogLab4.v Line: 158
-Error (10161): Verilog HDL error at VerilogLab4.v(158): object "midi_z" is not declared File: C:/Users/jcrouss/Desktop/lab4-thebeanbag81-patch-1/VerilogLab4.v Line: 158
-Info: Generated suppressed messages file C:/Users/jcrouss/Desktop/lab4-thebeanbag81-patch-1/Lab4Verilog1.map.smsg
-Error: Quartus II Analysis & Synthesis was unsuccessful. 6 errors, 1 warning
-    Error: Peak virtual memory: 227 megabytes
-    Error: Processing ended: Tue Dec 11 21:09:32 2018
-    Error: Elapsed time: 00:00:00
-    Error: Total CPU time (on all processors): 00:00:00
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/jcrouss/Desktop/lab4-thebeanbag81-patch-1/Lab4Verilog1.map.smsg.
+    Info: Found entity 5: bitCount
+Warning (10236): Verilog HDL Implicit Net warning at VerilogLab4.v(30): created implicit net for "clock_f"
+Info: Elaborating entity "Lab4Verilog1" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at VerilogLab4.v(30): object "clock_f" assigned a value but never read
+Info: Elaborating entity "counter" for hierarchy "counter:y"
+Warning (10230): Verilog HDL assignment warning at VerilogLab4.v(100): truncated value with size 11 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at VerilogLab4.v(114): truncated value with size 32 to match size of target (11)
+Info: Elaborating entity "frameSelect" for hierarchy "frameSelect:x"
+Info: Elaborating entity "led" for hierarchy "led:z"
+Warning (10036): Verilog HDL or VHDL warning at VerilogLab4.v(134): object "x" assigned a value but never read
+Warning (10858): Verilog HDL warning at VerilogLab4.v(135): object led_temp used but never assigned
+Warning (10199): Verilog HDL Case Statement warning at VerilogLab4.v(147): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at VerilogLab4.v(151): case item expression never matches the case expression
+Warning (10270): Verilog HDL Case Statement warning at VerilogLab4.v(141): incomplete case statement has no default case item
+Warning (10034): Output port "sendLed" at VerilogLab4.v(131) has no driver
+Warning: Entity "led" contains only dangling pins
+Info: Elaborating entity "bitCount" for hierarchy "bitCount:bC"
+Warning (10230): Verilog HDL assignment warning at VerilogLab4.v(204): truncated value with size 32 to match size of target (7)
+Warning (10240): Verilog HDL Always Construct warning at VerilogLab4.v(199): inferring latch(es) for variable "numBits", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "numBits[0]" at VerilogLab4.v(207)
+Info (10041): Inferred latch for "numBits[1]" at VerilogLab4.v(207)
+Info (10041): Inferred latch for "numBits[2]" at VerilogLab4.v(207)
+Info (10041): Inferred latch for "numBits[3]" at VerilogLab4.v(207)
+Info (10041): Inferred latch for "numBits[4]" at VerilogLab4.v(207)
+Info (10041): Inferred latch for "numBits[5]" at VerilogLab4.v(207)
+Info (10041): Inferred latch for "numBits[6]" at VerilogLab4.v(207)
+Warning: 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led_out[0]" is stuck at GND
+    Warning (13410): Pin "led_out[1]" is stuck at GND
+    Warning (13410): Pin "led_out[2]" is stuck at GND
+    Warning (13410): Pin "led_out[3]" is stuck at GND
+    Warning (13410): Pin "led_out[4]" is stuck at GND
+    Warning (13410): Pin "led_out[5]" is stuck at GND
+    Warning (13410): Pin "led_out[6]" is stuck at GND
+    Warning (13410): Pin "led_out[7]" is stuck at GND
+Warning: Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "rst_n"
+    Warning (15610): No output dependent on input pin "midi"
+Info: Implemented 19 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 8 macrocells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Wed Dec 12 14:06:34 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

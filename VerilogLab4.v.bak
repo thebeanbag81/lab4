@@ -40,6 +40,9 @@ assign midi_z = midi;
 
 led z(clk,midi_z,frame,sendLed);
 
+
+
+
 endmodule
 
 module frameSelect( frame, clk, lessThanIn);
@@ -123,6 +126,7 @@ output[9:0] sendLed;
 
 reg[9:0] sendLed;
 wire[9:0] x;
+wire[9:0] led_temp;
 assign x[9:0] = sendLed; 
 
 
@@ -145,8 +149,12 @@ always @(*) begin
 	endcase
 end
 endmodule
-
+/*
 module record(clk,midi_z,led_temp);
+
+input clk;
+input midi_z;
+output[9:0] led_temp;
 
 reg[3:0] cnt;
 wire[3:0] cnt_nxt;
@@ -163,4 +171,4 @@ end
 end
 endmodule
 
-
+*/

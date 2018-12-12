@@ -14,21 +14,23 @@ wire clock_c;
 wire lessThan;
 wire reset;
 wire midi_in;
+wire counterVal;
 
 assign clock_c = clk;
 assign reset = rst_n;
 assign midi_in = midi; 
 
-counter y(clock_c,reset,midi_in,lessThan);
 
-wire clock_f;
+counter y(clock_c,reset,midi_in,lessThan, counterVal);
+
+//wire clock_f;
 wire frame;
 wire lessThanIn;
 
 assign clock_f = clk;
-
 assign lessThanIn = lessThan;
-frameSelect x(frame, clock_f, lessThanIn);
+
+frameSelect x(frame, clk, lessThanIn);
 
 wire[9:0] sendLed;
 wire midi_z;
@@ -39,6 +41,11 @@ assign midi_z = midi;
 
 
 led z(clk,midi_z,frame,sendLed);
+
+wire[6:0] bitNum;
+
+
+bitCount bC(lessThanIn, counterVal, clk, rst_n, bitNum);
 
 endmodule
 
@@ -70,18 +77,20 @@ end
 
 endmodule
 
-module counter(clk, rst_n, midi,lessThan);
+module counter(clk, rst_n, midi,lessThan,counterVal);
 
 input clk;
 input rst_n;
 input midi;
 output lessThan;
+output[10:0] counterVal;
 
 reg a;
 reg b;
 reg[10:0] c ;
 wire numTime;
 
+assign counterVal = c;
 assign numTime = c>=1216;
 assign lessThan = numTime;
 
@@ -146,8 +155,12 @@ always @(*) begin
 	endcase
 end
 endmodule
-
+/*
 module record(clk,midi_z,led_temp);
+
+input clk;
+input midi_z;
+output[9:0] led_temp;
 
 reg[3:0] cnt;
 wire[3:0] cnt_nxt;
@@ -164,4 +177,37 @@ end
 end
 endmodule
 
+*/
 
+module bitCount(lessThanIn, counterVal, clk, rst_n, bitNum);
+input lessThanIn;
+input[10:0] counterVal;
+input clk;
+input rst_n;
+output[6:0] bitNum;
+
+reg[6:0] numBits;
+wire lTI;
+wire[10:0] cV;
+wire andBoth;
+
+assign cV = counterVal;
+assign bitNum = numBits;
+
+always @(*) begin
+
+	if(!rst_n) begin
+		numBits = 7'b0;
+	end
+	
+	if((((cV%64)==0) && ((cV%128)==64))) begin
+		numBits = numBits + 1;
+	end
+	
+	else if(!(((cV%64)==0) && ((cV%128)==64))) begin
+		numBits = numBits ;
+	end
+	
+end
+endmodule
+	
